@@ -7,7 +7,6 @@ class JobListingScreen extends StatelessWidget {
     {"title": "HR Manager", "company": "JCJC", "location": "Goa, India"},
     {"title": "Flutter Developer", "company": "Startup", "location": "Delhi, India"},
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,11 +32,9 @@ class JobListingScreen extends StatelessWidget {
                   border: InputBorder.none,
                   icon: Icon(Icons.search, color: Colors.grey),
                 ),
-              ),
-            ),
+              ),),
             SizedBox(height: 16),
 
-            // Job List
             Expanded(
               child: ListView.builder(
                 itemCount: jobs.length,
@@ -47,17 +44,11 @@ class JobListingScreen extends StatelessWidget {
                     title: job["title"]!,
                     company: job["company"]!,
                     location: job["location"]!,
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
+                  );},
+              ),),
+          ],),
+      ),);
+  }}
 class JobCard extends StatelessWidget {
   final String title;
   final String company;
@@ -105,7 +96,6 @@ class JobCard extends StatelessWidget {
             ),
             SizedBox(height: 12),
 
-            // Apply Button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -120,10 +110,7 @@ class JobCard extends StatelessWidget {
                 child: Text("Apply Now", style: TextStyle(fontSize: 16,
                     fontWeight: FontWeight.w600,color: Colors.white)),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+            ),],
+        ),),
+    );}
 }
