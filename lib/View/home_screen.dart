@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:inidiahiringg/View/settings.dart';
+import 'package:inidiahiringg/View/settings1.dart';
 import 'Job_Detail_Screen.dart';
 import 'Subscription.dart';
 import 'View_All.dart';
@@ -323,7 +325,9 @@ class _HomeScreenState extends State<HomeScreen> {
               top: 0,
               right: 0,
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AccountSettingsScreen()));
+                },
                 icon: const Icon(CupertinoIcons.heart, color: Colors.red),
               ),),
           ],),
